@@ -2,6 +2,8 @@
 
 Simple shell script to generate Etsy-ready framed and cropped product images from Cloudinary. The script will iterate through a batch of named and sequentially numbered images, generating a framed, full size and cropped version of each. 
 
+Files will be output as Jpegs, no matter the source format.
+
 1. Upload product images to Cloudinary
 2. Run script
 3. ...
@@ -10,7 +12,7 @@ Simple shell script to generate Etsy-ready framed and cropped product images fro
 ## Usage
 
 ```
-sh frame.sh [image shape] [start no] [stop no] [series name] [output name]
+sh frame.sh [image shape] [start no] [stop no] [batch name] [output name]
 ```
 
 For example:
@@ -33,8 +35,8 @@ Specify the number of images in a batch, e.g ```1 20``` if there are 20 images, 
 
 ### Batch name
 
-This is the common filename for a batch of images, eg Butterflies. Should match the Cloudinary image filename without the trailing number.
+Make sure images uploaded to Cloudinary follow the pattern ```[batch name]_[number]```, e.g. ```Butterflies_1```. Use batch name without the underscorr and trailing number, e.g. ```Butterflies```.
 
 ### Output name
 
-This is the output filename for your images. They will also be numbered sequentially.
+This is the saved filename for your images. This can be the same or different to the batch name. They will also be numbered sequentially.
