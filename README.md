@@ -31,7 +31,7 @@ The script can generate frames for square, A4 and 8x10 images, portrait or lands
 
 ### Start and stop numbers
 
-Specify the number of images in a batch, e.g ```1 20``` if there are 20 images, or a sequential range within, e.g ```5 15```.
+Specify the number of images in a batch, e.g ```1 20``` if there are 20 images and you want to download all of them, or a sequential range within, e.g ```5 15```.
 
 ### Batch name
 
