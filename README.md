@@ -29,11 +29,11 @@ The script can generate frames for square, A4 and 8x10 images, portrait or lands
 
 ### Start and stop numbers
 
-You can specify which images within a batch to work on, for example images 5-15 within a batch of 20.
+Specify the number of images in a batch, e.g ```1 20``` if there are 20 images, or a custom sequential range within, e.g ```5 15```.
 
-### Series name
+### Batch name
 
-This is the common name for a batch, eg Butterflies. Should be the Cloudinary image filename without the trailing number.
+This is the common filename for a batch of images, eg Butterflies. Should match the Cloudinary image filename without the trailing number.
 
 ### Output name
 
