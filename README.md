@@ -33,7 +33,7 @@ You can specify which images within a batch to work on, for example images 5-15 
 
 ### Series name
 
-This is the common name for a batch, eg Butterflies.
+This is the common name for a batch, eg Butterflies. Should be the Cloudinary image filename without the trailing number.
 
 ### Output name
 
