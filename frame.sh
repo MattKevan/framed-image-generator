@@ -15,12 +15,14 @@ do
 			wget https://res.cloudinary.com/dl4abuxel/image/upload/c_scale,e_multiply,h_1342,l_$4_$count,w_1342,x_0,y_0/v1612200911/square-frame.jpg -O $5-$count.jpg
 	elif [ $shape == "pa" ]
 		then
-		 	wget https://res.cloudinary.com/dl4abuxel/image/upload/c_scale,e_multiply,h_1362,l_$4_$count,w_1090,x_0,y_0/v1612200911/portrait-frame-a-size.jpg -O $5-$count.jpg
+		 	wget https://res.cloudinary.com/dl4abuxel/image/upload/c_scale,e_multiply,h_1380,l_$4_$count,w_976,x_0,y_0/v1612200911/portrait-frame-a-size.jpg -O $5-$count.jpg
 	elif [ $shape == "la" ]
 		then
-  			wget https://res.cloudinary.com/dl4abuxel/image/upload/c_scale,e_multiply,h_1090,l_$4_$count,w_1362,x_0,y_0/v1612200911/landscape-frame-a-size.jpg -O $5-$count.jpg
+  			wget https://res.cloudinary.com/dl4abuxel/image/upload/c_scale,e_multiply,h_976,l_$4_$count,w_1380,x_0,y_0/v1612200911/landscape-frame-a-size.jpg -O $5-$count.jpg
 	fi
-	wget https://res.cloudinary.com/dl4abuxel/image/upload/v1588690105/$4_$count.png -O $5-$count-full.jpg
-  wget https://res.cloudinary.com/dl4abuxel/image/upload/c_crop,h_900,w_1200/v1588690105/$4_$count.png -O $5-$count-crop.jpg
-  count=$(( $count +1 ))
+	
+  	wget https://res.cloudinary.com/dl4abuxel/image/upload/c_crop,h_900,w_1200/v1588690105/$4_$count -O $5-$count-crop.jpg
+
+  	count=$(( $count +1 ))
+
 done
