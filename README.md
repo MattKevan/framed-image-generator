@@ -1,6 +1,6 @@
 # Cloudinary framed image generator
 
-Simple shell script to generate Etsy-ready artwork product images from Cloudinary. The script will iterate through batches of sequentially numbered images, generating framed, full size and cropped versions of each. 
+Simple shell script to generate Etsy-ready artwork product images from Cloudinary. The script will iterate through batches of sequentially numbered images, generating framed and cropped versions of each. 
 
 Files will be output as JPEGs.
 
