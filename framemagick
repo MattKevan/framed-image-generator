@@ -1,42 +1,36 @@
-sourceDir="/Users/kevanm/Scripts"
+sourceDir="path/to/frame/templates"
+backgroundColour="#656A69"
 
 for filename in *; do
-
 	if [[ "$filename" == *"-p."* ]]
 		then
-
-		convert $sourceDir/portrait-frame.png -background '#656A69' -alpha remove \( $filename -resize 1090x1362 \) -gravity Center -compose multiply -composite "${filename%.*}"-frame.jpg
+		convert $sourceDir/portrait-frame.png -background '$backgroundColour' -alpha remove \( $filename -resize 1090x1362 \) -gravity Center -compose multiply -composite "${filename%.*}"-frame.jpg
 
 	elif [[ "$filename" == *"-l."* ]]
 		then
-
-		convert $sourceDir/landscape-frame.png -background '#656A69' -alpha remove \( $filename -resize 1362x1090 \) -gravity Center -compose multiply -composite "${filename%.*}"-frame.jpg
+		convert $sourceDir/landscape-frame.png -background '#$backgroundColour' -alpha remove \( $filename -resize 1362x1090 \) -gravity Center -compose multiply -composite "${filename%.*}"-frame.jpg
 
 	elif [[ "$filename" == *"-la."* ]]
 		then
-
-		convert $sourceDir/landscape-frame-a-size.png -background '#656A69' -alpha remove \( $filename -resize 1380x975 \) -gravity Center -compose multiply -composite "${filename%.*}"-frame.jpg
+		convert $sourceDir/landscape-frame-a-size.png -background '#$backgroundColour' -alpha remove \( $filename -resize 1380x975 \) -gravity Center -compose multiply -composite "${filename%.*}"-frame.jpg
 
 	elif  [[ "$filename" == *"-pa."* ]]
 		then
-
-		convert $sourceDir/portrait-frame-a-size.png -background '#656A69' -alpha remove \( $filename -resize 975x1380 \) -gravity Center -compose multiply -composite "${filename%.*}"-frame.jpg
+		convert $sourceDir/portrait-frame-a-size.png -background '#$backgroundColour' -alpha remove \( $filename -resize 975x1380 \) -gravity Center -compose multiply -composite "${filename%.*}"-frame.jpg
 
 	elif [[ "$filename" == *"-s."* ]]
 		then
-
-		convert $sourceDir/square-frame.png -background '#656A69' -alpha remove \( $filename -resize 1342x1342 \) -gravity Center -compose multiply -composite "${filename%.*}"-frame.jpg
+		convert $sourceDir/square-frame.png -background '#$backgroundColour' -alpha remove \( $filename -resize 1342x1342 \) -gravity Center -compose multiply -composite "${filename%.*}"-frame.jpg
 
 	elif [[ "$filename" == *"-frame."* ]]
-	 then
+	 	then
 		continue
 	fi
 
 	if [[ "$filename" != *"-crop."* ]]
 		then
-			convert $filename -gravity center -crop 1200x900+0+0  "${filename%.*}"-crop.jpg
+		convert $filename -gravity center -crop 1200x900+0+0  "${filename%.*}"-crop.jpg
 	else 
 		continue
 	fi
-
 done
