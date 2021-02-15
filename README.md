@@ -1,6 +1,20 @@
-# Cloudinary framed image generator
+# Framed image generator
 
-Simple shell script to generate Etsy-ready artwork product images from Cloudinary. The script will iterate through batches of sequentially numbered images, generating framed and cropped versions of each. 
+Simple shell scripts to generate Etsy-ready artwork product images. 
+
+## Framemagick
+
+This uses imagemagick. Run it in a folder and it'll automatically convert any image it finds. Append the filename to control the frame dimensions:
+
+* ```filename-p``` = portrait 8x10
+* ```filename-l``` = landscape 8x10
+* ```filename-pa``` = portrait A4
+* ```filename-la``` = landscape A4
+* ```filename-s``` = square
+
+
+## Frame.sh
+Uses Cloudinary. The script will iterate through batches of sequentially numbered images, generating framed and cropped versions of each. 
 
 Files will be output as JPEGs.
 
