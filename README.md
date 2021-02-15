@@ -4,13 +4,13 @@ Simple shell scripts to generate Etsy-ready artwork product images.
 
 ## Framemagick
 
-This uses imagemagick. Run it in a folder and it'll automatically convert any image it finds. Append the filename to control the frame dimensions:
+This uses imagemagick. Run it in a folder and it'll automatically convert any image it finds. Append the relevant code to the filename to control the frame template used:
 
-* ```filename-p``` = portrait 8x10
-* ```filename-l``` = landscape 8x10
-* ```filename-pa``` = portrait A4
-* ```filename-la``` = landscape A4
-* ```filename-s``` = square
+* ```[filename]-p``` = portrait 8x10
+* ```[filename]-l``` = landscape 8x10
+* ```[filename]-pa``` = portrait A4
+* ```[filename]-la``` = landscape A4
+* ```[filename]-s``` = square
 
 
 ## Frame.sh
